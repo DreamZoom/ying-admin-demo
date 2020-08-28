@@ -2,14 +2,20 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+
+import YingAdmin from "ying-admin"
+import "ying-admin/dist/main.css"
+
+
+import "./mocks/index"
 
 Vue.config.productionTip = false
+
+Vue.use(YingAdmin);
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
   components: { App },
   template: '<App/>'
 })

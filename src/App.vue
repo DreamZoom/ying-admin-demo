@@ -1,23 +1,16 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+  <ying-app :config="config"></ying-app>
 </template>
 
 <script>
+import config from "./config"
 export default {
-  name: 'App'
+  name: 'App',
+  methods:{
+    config(){
+      return Promise.resolve(config);
+    }
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

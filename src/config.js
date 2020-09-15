@@ -4,6 +4,7 @@ export default {
     routes: [{
         path: "/",
         component: YingAdmin.YingLayout,
+        redirect:"home",
         children: [{
             name: "首页",
             path: "home",
